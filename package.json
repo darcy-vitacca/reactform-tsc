@@ -3,23 +3,37 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@craco/craco": "^6.1.1",
+    "@hookform/resolvers": "^1.3.5",
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.8.1",
+    "@types/google-libphonenumber": "^7.4.19",
     "@types/jest": "^26.0.20",
     "@types/node": "^12.20.4",
     "@types/react": "^17.0.3",
     "@types/react-dom": "^17.0.1",
+    "@types/react-router-dom": "^5.1.7",
+    "@types/yup": "^0.29.11",
+    "google-libphonenumber": "^3.2.18",
     "react": "^17.0.1",
+    "react-confetti": "^6.0.1",
     "react-dom": "^17.0.1",
+    "react-dropzone": "^11.3.1",
+    "react-hook-form": "^6.15.4",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
+    "sweetalert2": "^10.15.5",
     "typescript": "^4.2.3",
-    "web-vitals": "^1.1.0"
+    "web-vitals": "^1.1.0",
+    "yup": "^0.32.9"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
+    "start:server": "node server.ts",
+    "dev": "concurrently --kill-others \"npm run start:server\" \"npm run start\"",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -39,5 +53,16 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss7-compat": "^2.0.3",
+    "autoprefixer": "^9.8.6",
+    "postcss": "^7.0.35",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.3",
+    "concurrently": "^5.2.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.1.7-alpha.3",
+    "morgan": "^1.10.0"
   }
 }
